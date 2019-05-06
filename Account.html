@@ -38,9 +38,7 @@
         </div>
         <div class="form-group col-md-4">
           <label for="inputState">State</label>
-          <select id="inputState" class="form-control">
-            <option selected>Choose...</option>
-            <option>...</option>
+          <input type="text" class="form-control" id="inputState">
           </select>
         </div>
         <div class="form-group col-md-2">
@@ -52,7 +50,7 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="gridCheck">
           <label class="form-check-label" for="gridCheck">
-            Check me out
+            Subscribe to our Enviornmental Concerns Mailing List
           </label>
         </div>
       </div>
@@ -67,16 +65,24 @@
     <script>
     $(document).ready(function(){
 
-        var account = {
-          "email":"accounttest@test.com",
-          "password":"passowrd123",
-          "address":"5445 Maple St.",
-          "address2":"",
-          "city":"Pomona",
-          "state":"CA",
-          "zip":"82171"
-        }
+      var account = {
+        "email":"accounttest@test.com",
+        "password":"passowrd123",
+        "address":"5445 Maple St.",
+        "address2":"",
+        "city":"Pomona",
+        "state":"CA",
+        "zip":"82171",
+        "mailingList":true
+      }
+      
       $('#inputEmail4').val(account.email);
+      $("#inputAddress").val(account.address);
+      $("#inputAddress2").val(account.address2);
+      $("#inputCity").val(account.city);
+      $("#inputState").val(account.state);
+      $("#inputZip").val(account.zip);
+      $("#gridCheck").prop('checked',account.mailingList);
 
     });
     </script>
