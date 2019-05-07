@@ -41,6 +41,26 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function(){
+        var articleObjArray = [
+            {
+                "title":"Impact of air pollution",
+                "lead":"Studies show that the amount of air pollution is at a....",
+                "img":"https://assets.henley.ac.uk/defaultUploads/globalwarm.png?mtime=20181010114502",
+                "link":"account.html"
+            },
+            {
+                "title":"Melting of the icecaps",
+                "lead":"As the planet warms ice caps are fading away leaving polar bears....",
+                "img":"https://api.timeforkids.com/wp-content/uploads/2018/08/GlobalWarming-HERO.jpg",
+                "link":"account.html"
+            },
+            {
+                "title":"Forest fires in California",
+                "lead":"Increase temperatures are leading to drier terrain which is prime fuel for...",
+                "img":"https://skepticalscience.com//pics/Wildfire-ArcticCircle-Sweden-2018.jpg",
+                "link":"account.html"
+            }
+        ];
         var images = [
             "https://assets.henley.ac.uk/defaultUploads/globalwarm.png?mtime=20181010114502",
             "https://api.timeforkids.com/wp-content/uploads/2018/08/GlobalWarming-HERO.jpg",
@@ -48,8 +68,12 @@
             "https://www.sciencenews.org/sites/default/files/2019/01/main/articles/010219_LH_ocean-plastic_feat.jpg"
             ];
 
-        images.forEach(function(URL, number) {
-            createImgItem(URL, number);
+        // images.forEach(function(URL, number) {
+        //     createImgItem(URL, number);
+        // });
+
+        articleObjArray.forEach(function(item, number){
+            createImgItem2(item, number);
         });
 
         function createImgItem(imageURL, index) {
@@ -64,6 +88,24 @@
             $a.append($img);
             $divMain.append($a).append($divCard);
             $divCollapse.append($pText);
+            $divCard.append($h5Title).append($divCollapse);
+
+            $("#imgHolder").append($divMain);
+        }
+
+        function createImgItem2(item, index) {
+            var $divMain = $("<div>",{"class":"col-lg-4 card mb-3"});
+            var $a = $("<a>", {"href":"#collapseInfo"+index,"class":"d-block mb-4 h-100", "data-toggle":"collapse", "data-target":"#collapseInfo"+index, "aria-expanded":"false", "aria-controls":"collapseInfo"+index});
+            var $img = $("<img>", {"src":item.img, "class":"card-img-top"});
+            var $divCard = $("<div>", {"class":"card-body"});
+            var $h5Title = $("<h5>", {"class":"card-title", "html":item.title});
+            var $divCollapse = $("<div>", {"class":"collapse","id":"collapseInfo"+index});
+            var $pText = $("<p>", {"html":item.lead});
+            var $aLink = $("<a>", {"href":item.link, "html":"More Info"});
+
+            $a.append($img);
+            $divMain.append($a).append($divCard);
+            $divCollapse.append($pText).append($aLink);
             $divCard.append($h5Title).append($divCollapse);
 
             $("#imgHolder").append($divMain);
