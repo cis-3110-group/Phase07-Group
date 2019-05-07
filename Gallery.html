@@ -12,6 +12,26 @@
   </head>
   <body>
     <h1>Gallery Page</h1>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Global Impact</h1>
+            <p>Human impact on the enviornment</p>
+        </div>
+        <div class="row" id="imgHolder">
+            <!-- <div class="col-lg-4 card mb-3">
+                <a href="#collapseInfo" class="d-block mb-4 h-100" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="colapseInfo">
+                    <img class="card-img-top" src="https://assets.henley.ac.uk/defaultUploads/globalwarm.png?mtime=20181010114502" alt="Card image cap">
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <div class="collapse" id="collapseInfo">
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
@@ -21,8 +41,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
     $(document).ready(function(){
+        var images = [
+            "https://assets.henley.ac.uk/defaultUploads/globalwarm.png?mtime=20181010114502",
+            "https://api.timeforkids.com/wp-content/uploads/2018/08/GlobalWarming-HERO.jpg",
+            "https://skepticalscience.com//pics/Wildfire-ArcticCircle-Sweden-2018.jpg",
+            "https://www.sciencenews.org/sites/default/files/2019/01/main/articles/010219_LH_ocean-plastic_feat.jpg"
+            ];
 
+        images.forEach(function(URL, number) {
+            createImgItem(URL, number);
+        });
 
+        function createImgItem(imageURL, index) {
+            var $divMain = $("<div>",{"class":"col-lg-4 card mb-3"});
+            var $a = $("<a>", {"href":"#collapseInfo"+index,"class":"d-block mb-4 h-100", "data-toggle":"collapse", "data-target":"#collapseInfo"+index, "aria-expanded":"false", "aria-controls":"collapseInfo"+index});
+            var $img = $("<img>", {"src":imageURL, "class":"card-img-top"});
+            var $divCard = $("<div>", {"class":"card-body"});
+            var $h5Title = $("<h5>", {"class":"card-title", "html":"Test Val"});
+            var $divCollapse = $("<div>", {"class":"collapse","id":"collapseInfo"+index});
+            var $pText = $("<p>", {"html":"innertext"});
+
+            $a.append($img);
+            $divMain.append($a).append($divCard);
+            $divCollapse.append($pText);
+            $divCard.append($h5Title).append($divCollapse);
+
+            $("#imgHolder").append($divMain);
+        }
     });
     </script>
   </body>
