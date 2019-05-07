@@ -8,32 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Gallery Page</title>
+    <title>Detail Page</title>
   </head>
   <body>
-    <h1>Gallery Page</h1>
-    <div class="container">
-        <div class="jumbotron">
-            <h1>Global Impact</h1>
-            <h5>Human impact on the enviornment</h5>
-            <p>Click an image for more information</p>
-        </div>
-        <div class="row" id="imgHolder">
-            <!-- <div class="col-lg-4 card mb-3">
-                <a href="#collapseInfo" class="d-block mb-4 h-100" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="colapseInfo">
-                    <img class="card-img-top" src="https://assets.henley.ac.uk/defaultUploads/globalwarm.png?mtime=20181010114502" alt="Card image cap">
-                </a>
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <div class="collapse" id="collapseInfo">
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    </div>
-                </div>
-            </div> -->
-        </div>
-    </div>
-
+    <h1>Detail Page</h1>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -68,28 +46,27 @@
                 "link":"Detail.html?article=3"
             }
         ];
+        
+        var articleIndex = getQueryVariable("article");
 
-        articleObjArray.forEach(function(item, number){
-            createImgItem(item, number);
-        });
+        var $h2 = $("<h2>",{"html":articleObjArray[articleIndex].title});
+        var $img = $("<img>",{"src":articleObjArray[articleIndex].img,"class":"img-thumbnail"});
+        var $p = $("<p>",{"html":articleObjArray[articleIndex].lead});
 
-        function createImgItem(item, index) {
-            var $divMain = $("<div>",{"class":"col-lg-4 card mb-3"});
-            var $a = $("<a>", {"href":"#collapseInfo"+index,"class":"d-block mb-4 h-100", "data-toggle":"collapse", "data-target":"#collapseInfo"+index, "aria-expanded":"false", "aria-controls":"collapseInfo"+index});
-            var $img = $("<img>", {"src":item.img, "class":"card-img-top"});
-            var $divCard = $("<div>", {"class":"card-body"});
-            var $h5Title = $("<h5>", {"class":"card-title", "html":item.title});
-            var $divCollapse = $("<div>", {"class":"collapse","id":"collapseInfo"+index});
-            var $pText = $("<p>", {"html":item.lead});
-            var $aLink = $("<a>", {"href":item.link, "html":"More Info", "class":"card-link"});
+        $("body").append($h2,$img,$p);
 
-            $a.append($img);
-            $divMain.append($a).append($divCard);
-            $divCollapse.append($pText).append($aLink);
-            $divCard.append($h5Title).append($divCollapse);
-
-            $("#imgHolder").append($divMain);
-        }
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i=0; i<vars.length; i++) {
+                var pair = vars[i].split("=");
+                if(pair[0] == variable) {
+                    pair[1] = pair[1].replace(/%20/g, " ");
+                    return pair[1];
+                }
+            }
+            return(false);
+        };
     });
     </script>
   </body>
