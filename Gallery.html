@@ -14,8 +14,8 @@
     <h1>Gallery Page</h1>
     <div class="container">
         <div class="jumbotron">
-            <h1>Global Impact</h1>
-            <h5>Human impact on the enviornment</h5>
+            <h1>Global Problems</h1>
+            <h5>Humans impact on the enviornment</h5>
             <p>Click an image for more information</p>
         </div>
         <div class="row" id="imgHolder">
@@ -44,25 +44,25 @@
     $(document).ready(function(){
         var articleObjArray = [
             {
-                "title":"Impact of air pollution",
+                "title":"Impact of Air Pollution",
                 "lead":"Studies show that the amount of air pollution is at a....",
                 "img":"https://assets.henley.ac.uk/defaultUploads/globalwarm.png?mtime=20181010114502",
                 "link":"Detail.html?article=0"
             },
             {
-                "title":"Melting of the icecaps",
+                "title":"Melting of the Icecaps",
                 "lead":"As the planet warms ice caps are fading away leaving polar bears....",
                 "img":"https://api.timeforkids.com/wp-content/uploads/2018/08/GlobalWarming-HERO.jpg",
                 "link":"Detail.html?article=1"
             },
             {
-                "title":"Forest fires in California",
+                "title":"Forest Fires in California",
                 "lead":"Increase temperatures are leading to drier terrain which is prime fuel for...",
                 "img":"https://skepticalscience.com//pics/Wildfire-ArcticCircle-Sweden-2018.jpg",
                 "link":"Detail.html?article=2"
             },
             {
-                "title":"Plastic in the ocean",
+                "title":"Plastic in the Ocean",
                 "lead":"Marine life are threatened as plastic waste continues to gather in the worlds oceans...",
                 "img":"https://www.sciencenews.org/sites/default/files/2019/01/main/articles/010219_LH_ocean-plastic_feat.jpg",
                 "link":"Detail.html?article=3"
@@ -81,7 +81,7 @@
             var $h5Title = $("<h5>", {"class":"card-title", "html":item.title});
             var $divCollapse = $("<div>", {"class":"collapse","id":"collapseInfo"+index});
             var $pText = $("<p>", {"html":item.lead});
-            var $aLink = $("<a>", {"href":item.link, "html":"More Info", "class":"card-link"});
+            var $aLink = $("<a>", {"href":item.link, "html":"Read More...", "class":"card-link"});
 
             $a.append($img);
             $divMain.append($a).append($divCard);
