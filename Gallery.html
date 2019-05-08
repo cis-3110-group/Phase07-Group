@@ -7,15 +7,47 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="custom.css">
 
     <title>Gallery Page</title>
   </head>
   <body>
-    <h1>Gallery Page</h1>
+        <!--Navbar-->
+        <nav id="topNav" class="navbar navbar-light navbar-1 white">
+      
+          <!-- Navbar brand -->
+          <a class="navbar-brand" href="#">Gallery Page</a>
+      
+          <!-- Collapse button -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      
+          <!-- Collapsible content -->
+          <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+      
+            <!-- Links -->
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Log In</a>
+              </li>
+            </ul>
+            <!-- Links -->
+      
+          </div>
+          <!-- Collapsible content -->
+      
+        </nav>
+        <!--/.Navbar-->
     <div class="container">
         <div class="jumbotron">
-            <h1>Global Problems</h1>
-            <h5>Humans impact on the enviornment</h5>
+            <h1><em>Global Problems</em></h1>
+            <em>Humans impact on the enviornment</em>
             <p>Click an image for more information</p>
         </div>
         <div class="row" id="imgHolder">
@@ -35,6 +67,100 @@
     </div>
 
 
+    <footer class="container-fluid text-center">
+            <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+            
+              <!-- Footer Links -->
+              <div class="container text-center text-md-left">
+            
+                <!-- Grid row -->
+                <div class="row">
+            
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+            
+                    <!-- Content -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+                    <p><i class="fab fa-twitter-square fa-2x"></i> <a href="#!"> TWITTER</a><br>
+                    <i class="fab fa-facebook-square fa-2x"></i> <a href="#!"> FACEBOOK</a><br>
+                    <i class="fab fa-linkedin fa-2x"></i> <a href="#!"> LINKEDIN</a></p>
+            
+                  </div>
+                  <!-- Grid column -->
+            
+                  <hr class="clearfix w-100 d-md-none">
+            
+                  <!-- Grid column -->
+                  <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+            
+                    <!-- Links -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+            
+                    <ul class="list-unstyled">
+                      <li>
+                        <p>
+                          <a href="#!">ABOUT US</a>
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a href="#!">CONTACT US</a>
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <a href="#!">BLOG</a>
+                        </p>
+                        <p>
+                          <a href="#!">PRIVACY</a>
+                        </p>
+                         <p>
+                          <a href="#!">TERMS OF SERVICE</a>
+                        </p>
+                      </li>
+                    </ul>
+            
+                  </div>
+                  <!-- Grid column -->
+            
+                  <hr class="clearfix w-100 d-md-none">
+            
+                  <!-- Grid column -->
+                  <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+            
+                    <!-- Contact details -->
+                    <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+            
+                    <ul class="list-unstyled">
+                      <li>
+                        <p>
+                          <i class="fas fa-home mr-3"></i> 3801 W Temple Ave, Pomona, CA 91768</p>
+                      </li>
+                      <li>
+                        <p>
+                          <i class="fas fa-envelope mr-3"></i> billybronco@cpp.edu</p>
+                      </li>
+                      <li>
+                        <p>
+                          <i class="fas fa-phone mr-3"></i> + 909 869 7659</p>
+                      </li>
+                      <li>
+                        <p>
+                          <i class="fas fa-print mr-3"></i> + 123 456 7890</p>
+                      </li>
+                    </ul>
+            
+                  </div>
+                  <!-- Grid column -->
+            
+                </div>
+                <!-- Grid row -->
+            
+              </div>
+              <!-- Footer Links -->
+            
+            </footer>
+            </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -81,7 +207,7 @@
             var $h5Title = $("<h5>", {"class":"card-title", "html":item.title});
             var $divCollapse = $("<div>", {"class":"collapse","id":"collapseInfo"+index});
             var $pText = $("<p>", {"html":item.lead});
-            var $aLink = $("<a>", {"href":item.link, "html":"Read More...", "class":"card-link"});
+            var $aLink = $("<a>", {"href":item.link, "html":"View More...", "class":"card-link"});
 
             $a.append($img);
             $divMain.append($a).append($divCard);
