@@ -42,13 +42,13 @@ p {
 
 /* Set black background color, white text and some padding */
 footer {
-	background-color: #ccc;
+	background-color: #c1e0b8;
 	color: white;
 	padding: 15px;
 }
 
 #topNav {
-	background-color: #ccc;
+	background-color: #c1e0b8;
 	margin-bottom: 8px;
 }
 /* On small screens, set height to 'auto' for sidenav and grid */
