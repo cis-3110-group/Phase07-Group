@@ -53,6 +53,15 @@ p {
 	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
+.gabby2 {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
 .navbar {
 	background-color: #e0e5de;
 	margin-bottom: 15px;
