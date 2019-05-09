@@ -1,26 +1,8 @@
-.article {
-	width: 50%;
-	margin: auto;
-}
-
-#article-img {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-
-.carousel {
-	width: 80%;
-	height: auto;
-	padding: 5px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.termsOfService {
-	width: 50%;
-	margin: auto;
+footer {
+	background-color: #e0e5de;
+	color: white;
+	padding: 15px;
+	margin-top: 15px;
 }
 
 h1 {
@@ -35,32 +17,49 @@ p {
 	font-size: 14px;
 }
 
+.article {
+	width: 50%;
+	margin: auto;
+}
+
+.carousel {
+	width: 80%;
+	height: auto;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .navbar {
 	background-color: #e0e5de;
+	margin-bottom: 15px;
 }
 
-#footerp {
-	color: #000;
-}
-
-/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
 .row.content {
 	height: auto;
 }
 
-/* Set black background color, white text and some padding */
-footer {
-	background-color: #e0e5de;
-	color: white;
-	padding: 15px;
-}
-
-/* Set gray background color and 100% height */
 .sidenav {
 	padding-top: 20px;
 	padding-left: 20px;
 	background-color: #fff;
 	height: 100%;
+}
+
+.termsOfService {
+	width: 50%;
+	margin: auto;
+}
+
+#article-img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+#footerp {
+	color: #000;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
