@@ -1,149 +1,153 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="custom.css">
-    <title>Detail Page</title>
-  </head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Details</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="custom.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/mdb.min.css" rel="stylesheet">
+    </head>
   <body>
-        <!--Navbar-->
-        <nav id="topNav" class="navbar navbar-light navbar-1 white">
+   <!--Navbar-->
+   <nav class="navbar navbar-light navbar-1 white">
+
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="home.html">Save the Environment</a>
+  
+      <!-- Collapse button -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+      aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+  
+      <!-- Collapsible content -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+  
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="account.html">Account Management</a>
+          </li>            
+        </ul>
       
-          <!-- Navbar brand -->
-          <a class="navbar-brand" href="#">Details</a>
-      
-          <!-- Collapse button -->
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-          aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      
-          <!-- Collapsible content -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-      
-            <!-- Links -->
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Log In</a>
-              </li>
-            </ul>
-            <!-- Links -->
-      
-          </div>
-          <!-- Collapsible content -->
-      
-        </nav>
-        <!--/.Navbar-->
+        <!-- Links -->
+      </div>
+      <!-- Collapsible content -->
+  
+    </nav>
+    <!--/.Navbar-->
+
     <div id="mainBody" class="container"></div>
 
     <footer class="container-fluid text-center">
-            <footer class="page-footer font-small mdb-color lighten-3 pt-4">
-            
-              <!-- Footer Links -->
-              <div class="container text-center text-md-left">
-            
-                <!-- Grid row -->
-                <div class="row">
-            
-                  <!-- Grid column -->
-                  <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-            
-                    <!-- Content -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-                    <p><i class="fab fa-twitter-square fa-2x"></i> <a href="#!"> TWITTER</a><br>
-                    <i class="fab fa-facebook-square fa-2x"></i> <a href="#!"> FACEBOOK</a><br>
-                    <i class="fab fa-linkedin fa-2x"></i> <a href="#!"> LINKEDIN</a></p>
-            
-                  </div>
-                  <!-- Grid column -->
-            
-                  <hr class="clearfix w-100 d-md-none">
-            
-                  <!-- Grid column -->
-                  <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-            
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
-            
-                    <ul class="list-unstyled">
-                      <li>
-                        <p>
-                          <a href="#!">ABOUT US</a>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <a href="#!">CONTACT US</a>
-                        </p>
-                      </li>
-                      <li>
-                        <p>
-                          <a href="#!">BLOG</a>
-                        </p>
-                        <p>
-                          <a href="#!">PRIVACY</a>
-                        </p>
-                         <p>
-                          <a href="#!">TERMS OF SERVICE</a>
-                        </p>
-                      </li>
-                    </ul>
-            
-                  </div>
-                  <!-- Grid column -->
-            
-                  <hr class="clearfix w-100 d-md-none">
-            
-                  <!-- Grid column -->
-                  <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-            
-                    <!-- Contact details -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-            
-                    <ul class="list-unstyled">
-                      <li>
-                        <p>
-                          <i class="fas fa-home mr-3"></i> 3801 W Temple Ave, Pomona, CA 91768</p>
-                      </li>
-                      <li>
-                        <p>
-                          <i class="fas fa-envelope mr-3"></i> billybronco@cpp.edu</p>
-                      </li>
-                      <li>
-                        <p>
-                          <i class="fas fa-phone mr-3"></i> + 909 869 7659</p>
-                      </li>
-                      <li>
-                        <p>
-                          <i class="fas fa-print mr-3"></i> + 123 456 7890</p>
-                      </li>
-                    </ul>
-            
-                  </div>
-                  <!-- Grid column -->
-            
-                </div>
-                <!-- Grid row -->
-            
-              </div>
-              <!-- Footer Links -->
-            
-            </footer>
-            </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      <footer class="page-footer font-small mdb-color grey lighten-3">
+  
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+  
+          <!-- Grid row -->
+          <div class="row">
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+  
+              <!-- Content -->
+              <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+              <p id="footerp"><i class="fab fa-twitter-square fa-1x"></i> <a href="#!"> Twitter</a><p>
+              <p id="footerp"><i class="fab fa-facebook-square fa-1x"></i> <a href="#!"> Facebook</a></p>
+              <p id="footerp"><i class="fab fa-linkedin fa-1x"></i> <a href="#!"> LinkedIn</a></p>
+  
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="clearfix w-100 d-md-none">
+  
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+  
+              <!-- Links -->
+              <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <p>
+                    <a href="aboutus.html">About Us</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="contactus.html">Contact Us</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="gallery.html">Gallery</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="ToS.html">Terms of Service</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <a href="signup.html">Sign Up</a>
+                  </p>
+                </li>
+              </ul>
+  
+            </div>
+            <!-- Grid column -->
+  
+            <hr class="clearfix w-100 d-md-none">
+  
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+  
+              <!-- Contact details -->
+              <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+  
+              <ul class="list-unstyled">
+                <li>
+                  <p id="footerp">
+                    <i class="fas fa-home mr-3"></i> 3801 W Temple Ave, Pomona, CA 91768</p>
+                </li>
+                <li>
+                  <p id="footerp">
+                    <i class="fas fa-envelope mr-3"></i> billybronco@cpp.edu</p>
+                </li>
+                <li>
+                  <p id="footerp">
+                    <i class="fas fa-phone mr-3"></i> + 909 869 7659</p>
+                </li>
+                <li>
+                  <p id="footerp">
+                    <i class="fas fa-print mr-3"></i> + 123 456 7890</p>
+                </li>
+              </ul>
+  
+            </div>
+            <!-- Grid column -->
+  
+          </div>
+          <!-- Grid row -->
+  
+        </div>
+        <!-- Footer Links -->
+  
+      </footer>
+    </footer>
+
     <script>
     $(document).ready(function(){
         var articleObjArray = [
@@ -170,6 +174,18 @@
                 "lead":"Marine life are threatened as plastic waste continues to gather in the worlds oceans...",
                 "img":"https://www.sciencenews.org/sites/default/files/2019/01/main/articles/010219_LH_ocean-plastic_feat.jpg",
                 "link":"Detail.html?article=3"
+            },
+            {
+                "title":"Landfills Growing",
+                "lead":"With the increase of non bio-digradable trash, landfills are growing both in size and number...",
+                "img":"https://irpi.eu/wp-content/uploads/2012/09/toxic-europe-1080x636.jpg",
+                "link":"Detail.html?article=4"
+            },
+            {
+                "title":"Weather Extremes",
+                "lead":"Global warming is lengthining the extreme weather conditions, leading to prolonged droughts...",
+                "img":"https://previews.123rf.com/images/hikrcn/hikrcn1404/hikrcn140400011/27358589-drought-dried-cracked-earth-environmental-disaster.jpg",
+                "link":"Detail.html?article=5"
             }
         ];
         
@@ -177,9 +193,9 @@
 
         var $h2 = $("<h2>",{"html":articleObjArray[articleIndex].title});
         var $img = $("<img>",{"src":articleObjArray[articleIndex].img,"class":"img-thumbnail"});
-        var $p = $("<p>",{"html":articleObjArray[articleIndex].lead});
+        // var $p = $("<p>",{"html":articleObjArray[articleIndex].lead});
 
-        $("#mainBody").append($h2,$img,$p);
+        $("#mainBody").append($h2,$img);
 
         function getQueryVariable(variable) {
             var query = window.location.search.substring(1);
